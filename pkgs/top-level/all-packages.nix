@@ -6897,7 +6897,9 @@ with pkgs;
 
   jamulus = libsForQt5.callPackage ../applications/audio/jamulus { };
 
-  ibm-sw-tpm2 = callPackage ../tools/security/ibm-sw-tpm2 { };
+  ibm-sw-tpm2 = callPackage ../tools/security/ibm-sw-tpm2 {
+    openssl = openssl_1_1;
+  };
 
   ibniz = callPackage ../tools/graphics/ibniz { };
 
